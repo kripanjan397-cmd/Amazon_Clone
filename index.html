@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A static Amazon-inspired online storefront built with HTML and CSS.">
+    <title>Amazon-inspired Storefront</title>
+    <link rel="stylesheet" href="amazon.css">
+</head>
+<body>
+    <header>
+        <div class="topbar">
+            <a class="brand" href="#" aria-label="Amazon home">amazon<span>.</span></a>
+
+            <a class="delivery" href="#">
+                <span class="pin" aria-hidden="true">⌖</span>
+                <span><small>Deliver to</small><strong>New York 10001</strong></span>
+            </a>
+
+            <form class="search" role="search">
+                <label class="sr-only" for="search-category">Search category</label>
+                <select id="search-category" aria-label="Search category">
+                    <option>All</option>
+                    <option>Electronics</option>
+                    <option>Home</option>
+                    <option>Fashion</option>
+                </select>
+                <label class="sr-only" for="site-search">Search products</label>
+                <input id="site-search" type="search" placeholder="Search Amazon">
+                <button type="submit" aria-label="Search">⌕</button>
+            </form>
+
+            <a class="nav-item language" href="#"><span aria-hidden="true">🇺🇸</span> EN</a>
+            <a class="nav-item account" href="#"><small>Hello, sign in</small><strong>Account &amp; Lists</strong></a>
+            <a class="nav-item orders" href="#"><small>Returns</small><strong>&amp; Orders</strong></a>
+            <a class="cart" href="#"><span aria-hidden="true">🛒</span><strong>Cart</strong></a>
+        </div>
+
+        <nav class="subnav" aria-label="Main navigation">
+            <a class="all-menu" href="#"><span aria-hidden="true">☰</span> All</a>
+            <a href="#">Today's Deals</a>
+            <a href="#">Customer Service</a>
+            <a href="#">Registry</a>
+            <a href="#">Gift Cards</a>
+            <a href="#">Sell</a>
+            <a class="subnav-promo" href="#">Big savings. Everyday essentials.</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" aria-label="Featured offer">
+            <div class="hero-copy">
+                <p class="eyebrow">The everyday upgrade</p>
+                <h1>Make room for<br>something better.</h1>
+                <p>Find the little things that make home feel like yours.</p>
+                <a class="hero-button" href="#home-picks">Explore home picks</a>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+                <div class="sun"></div>
+                <div class="plant">✳</div>
+                <div class="vase"></div>
+                <div class="table"></div>
+            </div>
+            <span class="hero-caption">Fresh finds for every corner of your home</span>
+        </section>
+
+        <div class="content">
+            <section class="category-strip" aria-label="Shop popular categories">
+                <a href="#home-picks"><span class="category-icon">⌂</span><strong>Home</strong></a>
+                <a href="#tech-picks"><span class="category-icon">▣</span><strong>Electronics</strong></a>
+                <a href="#style-picks"><span class="category-icon">◇</span><strong>Fashion</strong></a>
+                <a href="#daily-picks"><span class="category-icon">✿</span><strong>Beauty</strong></a>
+                <a href="#daily-picks"><span class="category-icon">⌁</span><strong>Kitchen</strong></a>
+                <a href="#tech-picks"><span class="category-icon">♫</span><strong>Audio</strong></a>
+            </section>
+
+            <section class="shopping-section" id="home-picks">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">Made for your space</p>
+                        <h2>Find your new favorite</h2>
+                    </div>
+                    <a class="see-more" href="#">Shop all home picks <span aria-hidden="true">→</span></a>
+                </div>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <a class="product-image image-home" href="#" aria-label="View cozy home decor">
+                            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Warm, modern living room">
+                            <span class="image-label">HOME EDIT</span>
+                        </a>
+                        <div class="product-info">
+                            <p class="product-category">Living room</p>
+                            <h3><a href="#">Little touches, big comfort</a></h3>
+                            <p class="product-subtitle">Decor, lighting &amp; cozy finds</p>
+                            <a class="text-link" href="#">Explore the edit</a>
+                        </div>
+                    </article>
+
+                    <article class="product-card" id="tech-picks">
+                        <a class="product-image image-tech" href="#" aria-label="View headphones">
+                            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Black and orange over-ear headphones">
+                            <span class="image-label">TOP RATED</span>
+                        </a>
+                        <div class="product-info">
+                            <p class="product-category">Tech that clicks</p>
+                            <h3><a href="#">Your soundtrack, upgraded</a></h3>
+                            <p class="product-subtitle">Headphones from $29.99</p>
+                            <a class="text-link" href="#">Shop audio <span aria-hidden="true">→</span></a>
+                        </div>
+                    </article>
+
+                    <article class="product-card" id="style-picks">
+                        <a class="product-image image-style" href="#" aria-label="View everyday fashion">
+                            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Friends browsing a clothing rack">
+                            <span class="image-label">EASY STYLE</span>
+                        </a>
+                        <div class="product-info">
+                            <p class="product-category">Everyday style</p>
+                            <h3><a href="#">A little refresh for you</a></h3>
+                            <p class="product-subtitle">New-season looks, made easy</p>
+                            <a class="text-link" href="#">Discover fashion</a>
+                        </div>
+                    </article>
+
+                    <article class="product-card" id="daily-picks">
+                        <a class="product-image image-kitchen" href="#" aria-label="View kitchen essentials">
+                            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&amp;fit=crop&amp;w=700&amp;q=85" alt="Bright kitchen with a wooden counter">
+                            <span class="image-label">DAILY FAVORITES</span>
+                        </a>
+                        <div class="product-info">
+                            <p class="product-category">Kitchen &amp; dining</p>
+                            <h3><a href="#">Make everyday a little easier</a></h3>
+                            <p class="product-subtitle">Clever tools for busy days</p>
+                            <a class="text-link" href="#">Shop kitchen finds</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="deal-banner">
+                <div class="deal-icon" aria-hidden="true">✦</div>
+                <div>
+                    <p class="eyebrow">A good day to save</p>
+                    <h2>Deals worth a closer look</h2>
+                    <p>Browse everyday favorites and limited-time finds.</p>
+                </div>
+                <a class="deal-button" href="#">See today's deals <span aria-hidden="true">→</span></a>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <a class="back-to-top" href="#">Back to top</a>
+        <div class="footer-main">
+            <a class="brand footer-brand" href="#" aria-label="Amazon home">amazon<span>.</span></a>
+            <p>Inspired shopping, made simple.</p>
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Customer service</a>
+                <a href="#">Privacy</a>
+                <a href="#">Terms</a>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 Amazon-inspired storefront · Student UI project</div>
+    </footer>
+</body>
+</html>
